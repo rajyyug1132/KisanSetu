@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "total_tests": 16,
+    "passed_tests": 16,
+    "success_rate": 100.0,
+    "timestamp": "2026-03-26T12:56:27.658487"
+  },
+  "detailed_results": [
+    {
+      "test": "Root API",
+      "method": "GET",
+      "endpoint": "",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Dashboard Data - Default",
+      "method": "GET",
+      "endpoint": "dashboard-data",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Dashboard Data - Pune weather",
+      "method": "GET",
+      "endpoint": "dashboard-data?location=pune",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Dashboard Data - Hubli weather with alerts",
+      "method": "GET",
+      "endpoint": "dashboard-data?location=hubli",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Dashboard Data - Solapur weather with critical soil",
+      "method": "GET",
+      "endpoint": "dashboard-data?location=solapur",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Dashboard Data - Nashik weather with adjusted prices",
+      "method": "GET",
+      "endpoint": "dashboard-data?location=nashik",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Advisory - Default Paddy Hindi",
+      "method": "POST",
+      "endpoint": "advisory",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Advisory - Wheat English",
+      "method": "POST",
+      "endpoint": "advisory",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Advisory - Empty query (should get default)",
+      "method": "POST",
+      "endpoint": "advisory",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Pest Scan with Image",
+      "method": "POST",
+      "endpoint": "scan",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Yield - Paddy 2 acres Hindi",
+      "method": "POST",
+      "endpoint": "yield",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Yield - Wheat 5 acres English",
+      "method": "POST",
+      "endpoint": "yield",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Yield - Small area (0.5 acres)",
+      "method": "POST",
+      "endpoint": "yield",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Invalid Endpoint",
+      "method": "GET",
+      "endpoint": "nonexistent",
+      "expected_status": 404,
+      "actual_status": 404,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Advisory - Invalid Language",
+      "method": "POST",
+      "endpoint": "advisory",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_preview": "OK"
+    },
+    {
+      "test": "Scan - Missing Image",
+      "method": "POST",
+      "endpoint": "scan",
+      "expected_status": 422,
+      "actual_status": 422,
+      "success": true,
+      "response_preview": "OK"
+    }
+  ]
+}
