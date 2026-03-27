@@ -1,0 +1,87 @@
+{
+  "theme": "Light Theme",
+  "archetype": "Archetype 1 (Organic & Earthy)",
+  "colors": {
+    "primary": "#4a7c59",
+    "primary_hover": "#3a6146",
+    "background": "#faf6f0",
+    "surface": "#ffffff",
+    "surface_hover": "#f3eee5",
+    "text_main": "#1a2e1d",
+    "text_muted": "#5c6d61",
+    "accent_sell": "#e67e22",
+    "accent_hold": "#d97706",
+    "accent_buy": "#4a7c59",
+    "border": "#e8e1d7",
+    "error": "#d9534f",
+    "success": "#4a7c59"
+  },
+  "typography": {
+    "heading_font": "Manrope",
+    "body_font": "DM Sans",
+    "vernacular_support": "Ensure system UI fallbacks for Hindi, Marathi, Kannada (e.g., Noto Sans Devanagari/Kannada)",
+    "scale": {
+      "h1": "text-3xl md:text-4xl tracking-tight font-extrabold text-[#1a2e1d]",
+      "h2": "text-2xl md:text-3xl tracking-tight font-bold text-[#1a2e1d]",
+      "h3": "text-xl font-bold text-[#1a2e1d]",
+      "body": "text-base leading-relaxed text-[#5c6d61]",
+      "small": "text-sm text-[#5c6d61]",
+      "label": "text-xs tracking-[0.05em] uppercase font-bold text-[#5c6d61]"
+    }
+  },
+  "layout_and_spacing": {
+    "container": "w-full max-w-[480px] mx-auto bg-[#faf6f0] min-h-screen relative shadow-2xl",
+    "padding": {
+      "page": "p-5",
+      "card": "p-5"
+    },
+    "border_radius": {
+      "button": "rounded-2xl",
+      "card": "rounded-3xl",
+      "image": "rounded-2xl"
+    },
+    "navigation": "Fixed bottom tab bar. Uses thick icons. Must accommodate a large central FAB for Voice.",
+    "fat_finger_touches": "All interactive targets (buttons, list items) MUST be min-h-[56px] for easy tapping by rural users."
+  },
+  "components": {
+    "cards": "Solid #ffffff surfaces with a delicate 1px border (#e8e1d7) and a very soft ambient shadow (shadow-sm). No glassmorphism as it reduces legibility in sunlight.",
+    "buttons": {
+      "primary": "bg-[#4a7c59] text-white rounded-2xl min-h-[56px] flex items-center justify-center font-bold text-lg w-full active:scale-[0.98] transition-transform",
+      "secondary": "bg-[#faf6f0] border-2 border-[#4a7c59] text-[#4a7c59] rounded-2xl min-h-[56px] flex items-center justify-center font-bold text-lg w-full",
+      "voice_fab": "Massive h-20 w-20 rounded-full bg-[#4a7c59] text-white shadow-[0_8px_32px_rgba(74,124,89,0.4)] flex items-center justify-center absolute bottom-6 left-1/2 -translate-x-1/2 z-50 border-4 border-[#faf6f0]"
+    },
+    "voice_visualizer": "Use concentric expanding circles (Ping animation in Tailwind) in #4a7c59 to indicate listening state.",
+    "testing": "All interactive elements must include 'data-testid' attribute (e.g., data-testid='voice-mic-btn')."
+  },
+  "motion": {
+    "interactions": "Focus on tactile touch states (`active:bg-[#f3eee5]` or `active:scale-[0.98]`) rather than hover states, as this is a mobile app.",
+    "transitions": "Keep animations under 200ms to feel snappy and responsive on lower-end devices."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use thick, clear stroke-width (2.5) for high legibility in bright sunlight."
+  },
+  "images": {
+    "hero_farmer": {
+      "url": "https://images.pexels.com/photos/35894304/pexels-photo-35894304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Background for onboarding or weather dashboard hero area."
+    },
+    "healthy_crop": {
+      "url": "https://images.pexels.com/photos/6870862/pexels-photo-6870862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Used as a success state placeholder for the Pest & Disease scan."
+    },
+    "mandi_market": {
+      "url": "https://images.pexels.com/photos/36289943/pexels-photo-36289943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Thumbnail or background graphic for the Mandi/Market Prices section."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly enforce the mobile-first max-w-[480px] container, centering it on desktop for a simulated mobile view (with shadow-2xl).",
+    "Always use the provided earthy color palette: Primary #4a7c59 and Background #faf6f0.",
+    "Ensure the bottom navigation is fixed, has a safe-area padding at the bottom, and features a prominent Voice FAB overlapping it.",
+    "Keep text large and legible. Contrast must be high for outdoor/sunlight visibility.",
+    "Use Manrope for headings and DM Sans for body.",
+    "Use 'data-testid' on all buttons and actionable elements.",
+    "Do not use complex 3D or heavy animations; prioritize fast loading, functional clarity, and fat-finger friendly touches."
+  ]
+}
